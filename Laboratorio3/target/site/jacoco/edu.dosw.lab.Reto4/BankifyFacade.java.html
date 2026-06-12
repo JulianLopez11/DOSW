@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BankifyFacade.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Laboratorio-3-DOSW</a> &gt; <a href="index.source.html" class="el_package">edu.dosw.lab.Reto4</a> &gt; <span class="el_source">BankifyFacade.java</span></div><h1>BankifyFacade.java</h1><pre class="source lang-java linenums">package edu.dosw.lab.Reto4;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+
+/**
+<<<<<<< HEAD
+ * Facade class that provides simplified access to the banking system
+ * operations.
+ * 
+ * @author Tulio Riaño , Juan Puentes , Julian Lopez
+=======
+ * Facade class that provides simplified access to the banking system operations.
+ * @author  Tulio Riaño , Juan Puentes , Julian Lopez
+>>>>>>> feature/Reto4_PuentesJuan_LopezJulian_TulioRiano-2025-2
+ * @version 1.0
+ */
+public class BankifyFacade {
+    private ManagementAccount managementAccount;
+    private ArrayList&lt;Account&gt; accounts;
+<<<<<<< HEAD
+    private ArrayList&lt;Customer&gt; customers;
+
+    /**
+     * Default constructor.
+     */
+<span class="fc" id="L21">    public BankifyFacade() {</span>
+<span class="fc" id="L22">        accounts = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L23">        managementAccount = new ManagementAccount();</span>
+<span class="fc" id="L24">        customers = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L25">    }</span>
+
+    /**
+     * Creates a new account with the given account name.
+     * 
+=======
+    /**
+     * Default constructor.
+     */
+<span class="fc" id="L17">    public BankifyFacade() {</span>
+<span class="fc" id="L18">        accounts = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L19">        managementAccount = new ManagementAccount();</span>
+<span class="fc" id="L20">    }</span>
+
+    /**
+     * Creates a new account with the given account name.
+>>>>>>> feature/Reto4_PuentesJuan_LopezJulian_TulioRiano-2025-2
+     * @param name account holder's name
+     * @return the newly created account
+     */
+    public Account createAccount(String name) {
+<<<<<<< HEAD
+<span class="fc" id="L34">        Account newAccount = managementAccount.createAccount(name);</span>
+<span class="fc" id="L35">        accounts.add(newAccount);</span>
+<span class="fc" id="L36">        customers.stream()</span>
+<span class="pc" id="L37">                .filter(a -&gt; a.getName().equals(name))</span>
+<span class="fc" id="L38">                .findAny()</span>
+<span class="pc" id="L39">                .ifPresent(a -&gt; a.setAccount(newAccount));</span>
+<span class="fc" id="L40">        return newAccount;</span>
+=======
+<span class="fc" id="L28">        Account newAccount = managementAccount.createAccount(name);</span>
+<span class="fc" id="L29">        accounts.add(newAccount);</span>
+<span class="fc" id="L30">        return newAccount;</span>
+>>>>>>> feature/Reto4_PuentesJuan_LopezJulian_TulioRiano-2025-2
+    }
+
+    /**
+     * Consults account information by its account number.
+<<<<<<< HEAD
+     * 
+=======
+>>>>>>> feature/Reto4_PuentesJuan_LopezJulian_TulioRiano-2025-2
+     * @param numberAccount the account number to search for
+     * @return a string with the account details (name, number, balance)
+     */
+    public String consultAccount(String numberAccount) {
+<<<<<<< HEAD
+<span class="fc" id="L50">        Account result = accounts.stream()</span>
+<span class="fc" id="L51">                .filter(a -&gt; a.getNumberAccount().equals(numberAccount))</span>
+<span class="fc" id="L52">                .findFirst()</span>
+<span class="fc" id="L53">                .orElse(null);</span>
+<span class="pc bpc" id="L54" title="1 of 2 branches missed.">        return result != null ? result.consultAccount(numberAccount) : null;</span>
+=======
+<span class="fc" id="L39">        Account result = accounts.stream()</span>
+<span class="fc" id="L40">                .filter(a -&gt; a.getNumberAccount().equals(numberAccount))</span>
+<span class="fc" id="L41">                .findFirst()</span>
+<span class="fc" id="L42">                .orElse(null);</span>
+<span class="pc bpc" id="L43" title="1 of 2 branches missed.">        return result != null ? result.consultAccount(numberAccount) : null;</span>
+>>>>>>> feature/Reto4_PuentesJuan_LopezJulian_TulioRiano-2025-2
+    }
+
+    /**
+     * Returns the list of all accounts registered in the system.
+<<<<<<< HEAD
+     * 
+     * @return list of accounts
+     */
+    public ArrayList&lt;Account&gt; getAccounts() {
+<span class="fc" id="L63">        return accounts;</span>
+=======
+     * @return list of accounts
+     */
+    public ArrayList&lt;Account&gt; getAccounts() {
+<span class="fc" id="L51">        return accounts;</span>
+>>>>>>> feature/Reto4_PuentesJuan_LopezJulian_TulioRiano-2025-2
+    }
+
+    /**
+     * Executes a movement from the given account to another account
+     * identified by its account number.
+<<<<<<< HEAD
+     * 
+     * @param account       source account
+     * @param amount        amount of money to transfer
+     * @param numberAccount destination account number
+     * @throws Exception possibles errors
+     */
+    public void doMovement(Account account, BigDecimal amount, String numberAccount) throws Exception {
+<span class="fc" id="L76">        Account account2 = accounts.stream()</span>
+<span class="fc" id="L77">                .filter(a -&gt; a.getNumberAccount().equals(numberAccount))</span>
+<span class="fc" id="L78">                .findAny()</span>
+<span class="fc" id="L79">                .orElse(null);</span>
+<span class="fc" id="L80">        account.doMovement(amount, account2);</span>
+<span class="fc" id="L81">    }</span>
+=======
+     * @param account       source account 
+     * @param amount        amount of money to transfer
+     * @param numberAccount destination account number
+     * @throws Exception  possibles errors
+     */
+    public void doMovement(Account account, BigDecimal amount, String numberAccount) throws Exception {
+<span class="nc bnc" id="L63" title="All 2 branches missed.">        for (Account a : accounts) {</span>
+<span class="nc bnc" id="L64" title="All 2 branches missed.">            if (a.getNumberAccount().equals(numberAccount)) {</span>
+<span class="nc" id="L65">                account.doMovement(amount, a);</span>
+            }
+<span class="nc" id="L67">        }</span>
+<span class="nc" id="L68">    }</span>
+>>>>>>> feature/Reto4_PuentesJuan_LopezJulian_TulioRiano-2025-2
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

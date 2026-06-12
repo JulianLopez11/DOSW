@@ -1,0 +1,6 @@
+projectKey=edu.dosw.lab:Laboratorio-3-DOSW
+serverUrl=http://localhost:9000
+serverVersion=25.9.0.112764
+dashboardUrl=http://localhost:9000/dashboard?id=edu.dosw.lab%3ALaboratorio-3-DOSW
+ceTaskId=8284340c-048d-498b-810e-5de760c6b262
+ceTaskUrl=http://localhost:9000/api/ce/task?id=8284340c-048d-498b-810e-5de760c6b262

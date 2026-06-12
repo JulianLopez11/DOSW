@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Account.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Laboratorio-3-DOSW</a> &gt; <a href="index.source.html" class="el_package">edu.dosw.lab.Reto4</a> &gt; <span class="el_source">Account.java</span></div><h1>Account.java</h1><pre class="source lang-java linenums">package edu.dosw.lab.Reto4;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+
+/**
+ * Represents a bank account with an account number, an account name,
+ * a balance, and a list of movements (transactions).
+ * 
+<<<<<<< HEAD
+ * @author Tulio Riaño - Juan Puentes - Julian Lopez
+=======
+ * @author  Tulio Riaño - Juan Puentes - Julian Lopez
+>>>>>>> feature/Reto4_PuentesJuan_LopezJulian_TulioRiano-2025-2
+ * @version 1.0
+ */
+public class Account {
+    private String name;
+    private BigDecimal balance;
+    private String numberAccount;
+    private ArrayList&lt;Movement&gt; movements;
+
+    /**
+     * Default constructor.
+     */
+<span class="nc" id="L22">    public Account() {</span>
+
+<span class="nc" id="L24">    }</span>
+
+    /**
+     * Creates a new account with the given account name and account number.
+     * The initial balance is set to 0.
+<<<<<<< HEAD
+     * 
+     * @param name          account name
+     * @param numberAccount account number
+     */
+<span class="fc" id="L33">    public Account(String name, String numberAccount) {</span>
+<span class="fc" id="L34">        this.name = name;</span>
+<span class="fc" id="L35">        this.numberAccount = numberAccount;</span>
+<span class="fc" id="L36">        movements = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L37">        balance = new BigDecimal(0);</span>
+<span class="fc" id="L38">    }</span>
+
+    /**
+     * Gets the account name.
+     * 
+     * @return account name
+     */
+    public String getName() {
+<span class="fc" id="L46">        return name;</span>
+=======
+     * @param name          account name
+     * @param numberAccount account number
+     */
+<span class="fc" id="L32">    public Account(String name, String numberAccount) {</span>
+<span class="fc" id="L33">        this.name = name;</span>
+<span class="fc" id="L34">        this.numberAccount = numberAccount;</span>
+<span class="fc" id="L35">        movements = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L36">        balance = new BigDecimal(0);</span>
+<span class="fc" id="L37">    }</span>
+
+    /**
+     * Gets the account name.
+     * @return account name
+     */
+    public String getName() {
+<span class="fc" id="L44">        return name;</span>
+>>>>>>> feature/Reto4_PuentesJuan_LopezJulian_TulioRiano-2025-2
+    }
+
+    /**
+     * Gets the account number.
+<<<<<<< HEAD
+     * 
+     * @return account number
+     */
+    public String getNumberAccount() {
+<span class="fc" id="L55">        return numberAccount;</span>
+=======
+     * @return account number
+     */
+    public String getNumberAccount() {
+<span class="fc" id="L52">        return numberAccount;</span>
+>>>>>>> feature/Reto4_PuentesJuan_LopezJulian_TulioRiano-2025-2
+    }
+
+    /**
+     * Gets the current account balance.
+<<<<<<< HEAD
+     * 
+     * @return current balance
+     */
+    public BigDecimal getBalance() {
+<span class="fc" id="L64">        return balance;</span>
+=======
+     * @return current balance
+     */
+    public BigDecimal getBalance() {
+<span class="fc" id="L60">        return balance;</span>
+>>>>>>> feature/Reto4_PuentesJuan_LopezJulian_TulioRiano-2025-2
+    }
+
+    /**
+     * Returns a string with the account details: name, account number, and balance.
+     *
+<<<<<<< HEAD
+     * @param numberAccount account number to be consulted
+     * @return string containing account name, account number, and balance
+     */
+    public String consultAccount(String numberAccount) {
+<span class="fc" id="L74">        return this.getName() + &quot; &quot; + this.getNumberAccount() + &quot; &quot; + this.getBalance().toString();</span>
+=======
+     * @param numberAccount account number to be consulted 
+     * @return string containing account name, account number, and balance
+     */
+    public String consultAccount(String numberAccount) {
+<span class="fc" id="L70">        return this.getName() + &quot; &quot; + this.getNumberAccount() + &quot; &quot; + this.getBalance().toString();</span>
+>>>>>>> feature/Reto4_PuentesJuan_LopezJulian_TulioRiano-2025-2
+    }
+
+    /**
+     * Performs a movement from this account to a destination account.
+     *
+     * @param amount      the amount of money to transfer
+     * @param destination the destination account that will receive the money
+<<<<<<< HEAD
+     * @throws Exception possibles errors
+     */
+    public void doMovement(BigDecimal amount, Account destination) throws Exception {
+<span class="fc" id="L85">        Movement movement = new Movement();</span>
+<span class="fc" id="L86">        movements.add(movement);</span>
+<span class="fc" id="L87">        movement.doMovement(this, amount, destination);</span>
+<span class="fc" id="L88">    }</span>
+
+    /**
+     * Updates the account balance.
+     * 
+     * @param balance new balance to be set
+     */
+    public void setBalance(BigDecimal balance) {
+<span class="fc" id="L96">        this.balance = balance;</span>
+<span class="fc" id="L97">    }</span>
+=======
+     * @throws Exception  possibles errors
+     */
+    public void doMovement(BigDecimal amount, Account destination) throws Exception {
+<span class="fc" id="L81">        Movement movement = new Movement();</span>
+<span class="fc" id="L82">        movements.add(movement);</span>
+<span class="fc" id="L83">        movement.doMovement(this, amount, destination);</span>
+<span class="fc" id="L84">    }</span>
+
+    /**
+     * Updates the account balance.
+     * @param balance new balance to be set
+     */
+    public void setBalance(BigDecimal balance) {
+<span class="fc" id="L91">        this.balance = balance;</span>
+<span class="fc" id="L92">    }</span>
+>>>>>>> feature/Reto4_PuentesJuan_LopezJulian_TulioRiano-2025-2
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

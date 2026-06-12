@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Customer.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Laboratorio-3-DOSW</a> &gt; <a href="index.source.html" class="el_package">edu.dosw.lab.Reto4</a> &gt; <span class="el_source">Customer.java</span></div><h1>Customer.java</h1><pre class="source lang-java linenums">package edu.dosw.lab.Reto4;
+
+import java.math.BigDecimal;
+
+/**
+ * Represents a customer of the banking system.
+<<<<<<< HEAD
+ * 
+ * @author Tulio Riaño, Juan Puentes, Julian Lopez
+ * @version 1.1
+=======
+ * @author  Tulio Riaño, Juan Puentes, Julian Lopez
+ * @version 1.0
+>>>>>>> feature/Reto4_PuentesJuan_LopezJulian_TulioRiano-2025-2
+ */
+public class Customer {
+    private String name;
+    private BankifyFacade bankifyFacade;
+    private Account account;
+
+    /**
+     * Creates a new customer with the given name.
+     * Initializes the bank facade
+<<<<<<< HEAD
+     * 
+     * @param name customer's name
+     */
+<span class="fc" id="L22">    public Customer(String name, BankifyFacade bankifyFacade) {</span>
+<span class="fc" id="L23">        this.name = name;</span>
+<span class="fc" id="L24">        this.bankifyFacade = bankifyFacade;</span>
+<span class="fc" id="L25">    }</span>
+
+    /**
+     * Creates a new account for this customer.
+     * 
+=======
+     * @param name customer's name
+     */
+<span class="fc" id="L20">    public Customer(String name) {</span>
+<span class="fc" id="L21">        this.name = name;</span>
+<span class="fc" id="L22">        bankifyFacade = new BankifyFacade();</span>
+<span class="fc" id="L23">    }</span>
+
+    /**
+     * Creates a new account for this customer.
+>>>>>>> feature/Reto4_PuentesJuan_LopezJulian_TulioRiano-2025-2
+     * @param name name of the account holder
+     * @return the newly created account
+     */
+    public Account createAccount(String name) {
+<<<<<<< HEAD
+<span class="fc" id="L34">        this.account = bankifyFacade.createAccount(name);</span>
+<span class="fc" id="L35">        return this.account;</span>
+=======
+<span class="fc" id="L31">        return bankifyFacade.createAccount(name);</span>
+>>>>>>> feature/Reto4_PuentesJuan_LopezJulian_TulioRiano-2025-2
+    }
+
+    /**
+     * Performs a movement from the given account to another account.
+<<<<<<< HEAD
+     * 
+=======
+>>>>>>> feature/Reto4_PuentesJuan_LopezJulian_TulioRiano-2025-2
+     * @param account       source account
+     * @param amount        amount of money to transfer
+     * @param numberAccount destination account number
+     */
+<<<<<<< HEAD
+    public void doMovement(BigDecimal amount, String numberAccount) {
+        try {
+<span class="fc" id="L47">            bankifyFacade.doMovement(account, amount, numberAccount);</span>
+<span class="nc" id="L48">        } catch (Exception e) {</span>
+<span class="nc" id="L49">            System.out.println(e.getMessage());</span>
+<span class="fc" id="L50">        }</span>
+<span class="fc" id="L51">    }</span>
+
+    /**
+     * Consults the details of an account by its number.
+     * 
+=======
+    public void doMovement(Account account, BigDecimal amount, String numberAccount) {
+        try {
+<span class="nc" id="L42">            bankifyFacade.doMovement(account, amount, numberAccount);</span>
+<span class="nc" id="L43">        } catch (Exception e) {</span>
+<span class="nc" id="L44">            System.out.println(e.getMessage());</span>
+<span class="nc" id="L45">        }</span>
+<span class="nc" id="L46">    }</span>
+
+    /**
+     * Consults the details of an account by its number.
+>>>>>>> feature/Reto4_PuentesJuan_LopezJulian_TulioRiano-2025-2
+     * @param numberAccount account number to consult
+     * @return string with the account details
+     */
+    public String consultAccount(String numberAccount) {
+<<<<<<< HEAD
+<span class="fc" id="L60">        return bankifyFacade.consultAccount(numberAccount);</span>
+=======
+<span class="fc" id="L54">        return bankifyFacade.consultAccount(numberAccount);</span>
+>>>>>>> feature/Reto4_PuentesJuan_LopezJulian_TulioRiano-2025-2
+    }
+
+    /**
+     * Gets the customer's name.
+<<<<<<< HEAD
+     * 
+     * @return customer's name
+     */
+    public String getName() {
+<span class="fc" id="L69">        return name;</span>
+=======
+     * @return customer's name
+     */
+    public String getName() {
+<span class="fc" id="L62">        return name;</span>
+>>>>>>> feature/Reto4_PuentesJuan_LopezJulian_TulioRiano-2025-2
+    }
+
+    /**
+     * Gets the facade used by the customer.
+<<<<<<< HEAD
+     * 
+     * @return instance
+     */
+    public BankifyFacade getBankifyFacade() {
+<span class="fc" id="L78">        return bankifyFacade;</span>
+=======
+     * @return instance
+     */
+    public BankifyFacade getBankifyFacade() {
+<span class="fc" id="L70">        return bankifyFacade;</span>
+>>>>>>> feature/Reto4_PuentesJuan_LopezJulian_TulioRiano-2025-2
+    }
+
+    /**
+     * Sets the customer's name.
+<<<<<<< HEAD
+     * 
+     * @param name new customer name
+     */
+    public void setName(String name) {
+<span class="fc" id="L87">        this.name = name;</span>
+<span class="fc" id="L88">    }</span>
+
+    public void setAccount(Account account) {
+<span class="fc" id="L91">        this.account = account;</span>
+<span class="fc" id="L92">    }</span>
+=======
+     * @param name new customer name
+     */
+    public void setName(String name) {
+<span class="nc" id="L78">        this.name = name;</span>
+<span class="nc" id="L79">    }</span>
+>>>>>>> feature/Reto4_PuentesJuan_LopezJulian_TulioRiano-2025-2
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

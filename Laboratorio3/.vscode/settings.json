@@ -1,0 +1,8 @@
+{
+<<<<<<< HEAD
+  "java.compile.nullAnalysis.mode": "disabled"
+}
+=======
+    "java.debug.settings.onBuildFailureProceed": true
+}
+>>>>>>> 00f9b88b8e65009f53a7796aaa37a492bfdb926f

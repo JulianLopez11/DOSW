@@ -1,0 +1,16 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Laboratorio-3-DOSW,edu.dosw.lab,Application,5,0,0,0,3,0,2,0,2,0
+<<<<<<< HEAD
+Laboratorio-3-DOSW,edu.dosw.lab.Reto4,BankifyFacade,10,87,1,1,0,24,3,7,2,7
+Laboratorio-3-DOSW,edu.dosw.lab.Reto4,Customer,5,46,0,0,2,16,0,8,0,8
+=======
+Laboratorio-3-DOSW,edu.dosw.lab.Reto4,BankifyFacade,23,51,5,1,5,13,4,5,1,5
+Laboratorio-3-DOSW,edu.dosw.lab.Reto4,Customer,17,27,0,0,7,8,2,5,2,5
+>>>>>>> feature/Reto4_PuentesJuan_LopezJulian_TulioRiano-2025-2
+Laboratorio-3-DOSW,edu.dosw.lab.Reto4,Movement,5,28,1,1,1,7,1,2,0,2
+Laboratorio-3-DOSW,edu.dosw.lab.Reto4,ValidateAccount,1,14,1,3,0,2,1,3,0,2
+Laboratorio-3-DOSW,edu.dosw.lab.Reto4,Account,3,57,0,0,2,16,1,7,1,7
+Laboratorio-3-DOSW,edu.dosw.lab.Reto4,ManagementAccount,0,55,0,2,0,10,0,3,0,2
+Laboratorio-3-DOSW,edu.dosw.lab.Reto3,ValidateVotes,47,0,8,0,11,0,7,0,3,0
+Laboratorio-3-DOSW,edu.dosw.lab.Reto3,Fibonacci,43,0,0,0,3,0,3,0,3,0
+Laboratorio-3-DOSW,edu.dosw.lab.Reto3,PlanningPoker,166,0,16,0,40,0,13,0,5,0
