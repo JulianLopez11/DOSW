@@ -100,7 +100,7 @@ A REST API for a fast food ordering platform:
 
 ## Exams
 
-The exams are designed to assess individual technical skills, ensuring the student has full knowledge of the subject matter.
+The exams are designed to assess individual technical skills, ensuring full knowledge of the subject matter.
 
 ### Exam 1 — Notification System (Parcial Corte 1)
 
